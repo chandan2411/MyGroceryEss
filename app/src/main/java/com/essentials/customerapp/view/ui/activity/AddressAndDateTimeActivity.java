@@ -71,6 +71,7 @@ public class AddressAndDateTimeActivity extends AppCompatActivity implements Vie
     private KProgressHUD progressHUD;
     private RelativeLayout rlProgress;
     double deliveryTimeSlot=19;
+    int  deliveryduration=1;
 
 
     @Override
@@ -101,6 +102,7 @@ public class AddressAndDateTimeActivity extends AppCompatActivity implements Vie
                 //get id and phone_number
 
                 deliveryTimeSlot = Double.parseDouble(String.valueOf(dataSnapshot.child("DeliveryTimeSlot").getValue()));
+                deliveryduration = Integer.parseInt(String.valueOf(dataSnapshot.child("Offer_Expire_Date").getValue()));
             }
 
             @Override
@@ -212,9 +214,9 @@ public class AddressAndDateTimeActivity extends AppCompatActivity implements Vie
         }
 
         String currentTimeSlot = AppUtils.dateAndTimeFormatted() + " (8AM - 9PM)";
-        String currentTimeSlot1 = AppUtils.getDateAfterCurrentDate(2, false) + " (8AM - 9PM)";
-        String currentTimeSlot2 = AppUtils.getDateAfterCurrentDate(3, false) + " (8AM - 9PM)";
-        String currentTimeSlot3 = AppUtils.getDateAfterCurrentDate(4, false) + " (8AM - 9PM)";
+        String currentTimeSlot1 = AppUtils.getDateAfterCurrentDate(deliveryduration, false) + " (8AM - 9PM)";
+        String currentTimeSlot2 = AppUtils.getDateAfterCurrentDate(deliveryduration+1, false) + " (8AM - 9PM)";
+        String currentTimeSlot3 = AppUtils.getDateAfterCurrentDate(deliveryduration+2, false) + " (8AM - 9PM)";
         if (!isLate) {
             tvSlot1.setText(currentTimeSlot);
             tvSlot2.setText(currentTimeSlot1);
