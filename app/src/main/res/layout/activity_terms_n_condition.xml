@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroungColor"
+    tools:context=".view.ui.activity.AboutUsActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+
+        <include
+            layout="@layout/white_toolabr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/ubuntu_regular"
+            android:maxLines="1"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:ellipsize="end"
+            android:text="@string/terms_and_conditions"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_medium" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlBanner"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_regular"
+                android:lineSpacingExtra="5dp"
+                android:text="@string/msg1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/ubuntu_regular"
+                android:lineSpacingExtra="5dp"
+                android:text="@string/msg2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/ubuntu_regular"
+                android:lineSpacingExtra="5dp"
+                android:text="@string/msg3"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/ubuntu_regular"
+                android:lineSpacingExtra="5dp"
+                android:text="@string/msg4"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

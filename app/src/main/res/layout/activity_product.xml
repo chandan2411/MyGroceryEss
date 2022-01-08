@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:id="@+id/rlBanner"
+        android:layout_width="match_parent"
+        android:visibility="visible">
+
+        <include
+            layout="@layout/white_toolabr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/ubuntu_regular"
+            android:maxLines="1"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:ellipsize="end"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_medium" />
+
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProduct"
+        android:layout_below="@id/rlBanner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible" />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rlBanner"
+        android:id="@+id/rlError"
+        layout="@layout/not_found_view"
+        android:visibility="invisible" />
+
+
+</RelativeLayout>

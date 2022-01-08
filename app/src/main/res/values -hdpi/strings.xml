@@ -1,0 +1,85 @@
+<resources>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="email">Email Id</string>
+    <string name="passowrd">Password</string>
+    <string name="login">LOGIN</string>
+    <string name="show_pwd">Show Password</string>
+    <string name="hide_pwd">Hide Password</string>
+    <string name="forgot">Forgot password?</string>
+    <string name="closebutton">Close Button for Activity</string>
+    <string name="newUser">Not a Member yet? Sign Up here.</string>
+    <string name="fullName">Full Name</string>
+    <string name="mobileNumber">Mobile Number</string>
+    <string name="location">Location</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="terms_conditions">By clicking SignUp you agree all the Terms and Conditions.</string>
+    <string name="signUp">SIGN UP</string>
+    <string name="already_user">Already have Account? Login here.</string>
+    <string name="registered_emailid">Please enter your Registered Email Id below:</string>
+    <string name="submit">SUBMIT</string>
+    <string name="back">BACK</string>
+    <string name="action_Cart">Cart</string>
+    <string name="app_name">Essentials</string>
+    <string name="preference_file_name">grocery_shared_pref</string>
+    <string name="location_message">Please allow permission for location</string>
+    <string name="choose_location">Add Address</string>
+    <string name="auto_location">Auto Location</string>
+    <string name="service_not_available">Service not available</string>
+    <string name="invalid_lat_long_used">Invalid lat long</string>
+    <string name="no_address_found">No Address found</string>
+    <string name="address_found">Address found</string>
+    <string name="no_geocoder_available">No Address</string>
+    <string name="pincode">Pincode*</string>
+    <string name="add_address">Add Address</string>
+    <string name="houseno">House No., Building name*</string>
+    <string name="roadname">Road Name, Area, Colony*</string>
+    <string name="city">City*</string>
+    <string name="landmark">Landmark(Optional)</string>
+    <string name="save_address">Save Address</string>
+    <string name="login_to_checkout">Login to Checkout</string>
+    <string name="checkout">Checkout</string>
+    <string name="msg1">Essentials Concepts Private Limited is an e-commerce venture that provides food staples and household items at your doorstep. Essentials is established with a motto - ‘Create value for our customers to build an ever-lasting relation’.</string>
+    <string name="msg2"><![CDATA[Our efficient & bulk procurement, state-of-the-art storage & handling, and unmatched logistics enable us to pass on the price and quality advantage to our customers.]]></string>
+    <string name="msg3">We firmly believe that ultimately it is the customer trust that creates profitable businesses. We bring highest quality products at the most honest, reasonable and competing prices with unmatched convenience – savings on time and money!!!</string>
+    <string name="msg4">We shall continue to strive hard to innovate and discover efficient means to create value for our customers, employees and community.</string>
+    <string name="msg5">If you have any query or need any help or suggestion you can write mail or contact us:</string>
+    <string name="admin_email">Kodesoftsolutions@gmail.com</string>
+    <string name="admin_mobile_no">78925 34152</string>
+    <string name="rs">Rs</string>
+    <string name="_10">10%</string>
+    <string name="image">IMAGE</string>
+    <string name="indian_rupee_sign">₹</string>
+    <string name="thanks_for_shopping_with_go_fresh">Thanks for shopping with Essentials</string>
+    <string name="your_order_has_been_placed">Your order has been placed</string>
+    <string name="continue_shopping">Continue Shopping</string>
+    <string name="please_pay_amount_to_the_delivery_executive">Please pay amount to the delivery executive</string>
+    <string name="are_you_sure_want_to_cancel_to_deliver_this_product">Are you sure want to cancel to deliver this product??</string>
+    <string name="reason_for_cancel">Reason for cancel</string>
+    <string name="any_feedback_or_suggestion_for_us">Any feedback or suggestion for us</string>
+    <string name="signin">SignIn</string>
+    <string name="get_25_off_on_first_three_order_on_shopping_over_999">Flat ₹75 off on first three order on shopping over ₹999</string>
+    <string name="get_free_delivery">Get free delivery on order above 499</string>
+    <string name="adderss">Adderss</string>
+    <string name="payment">Payment</string>
+    <string name="full_name">Full Name</string>
+    <string name="mobile_number">Mobile number</string>
+    <string name="onestep_for_all_your_essentials">OneStep For All YOUR ESSENTIALS</string>
+    <string name="imageview">IMAGEVIEW</string>
+
+    <string-array name="cancel_reason">
+        <item>@string/reason_for_cancel</item>
+        <item>Found better deal </item>
+        <item>Not required </item>
+        <item>Have doubt about product </item>
+    </string-array>
+</resources>

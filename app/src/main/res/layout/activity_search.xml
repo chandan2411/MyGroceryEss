@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativelayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <!-- <RelativeLayout
+         android:background="@color/colorPrimary"
+         android:id="@+id/rlToolbar"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+
+         <androidx.appcompat.widget.Toolbar
+             android:gravity="center_vertical"
+             android:id="@+id/toolbar"
+             android:layout_width="match_parent"
+             android:layout_height="?attr/actionBarSize"
+             android:background="@color/colorPrimary"
+             android:theme="@style/custom_toolbar"
+             app:layout_scrollFlags="scroll|enterAlways" />
+
+
+     </RelativeLayout>
+
+
+ &lt;!&ndash;List View from which data is to be searched&ndash;&gt;
+ <androidx.recyclerview.widget.RecyclerView
+     android:layout_below="@+id/rlToolbar"
+     android:id="@+id/recyclerView"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:layout_margin="@dimen/padding_10" />-->
+
+    <RelativeLayout
+        android:padding="@dimen/padding_10"
+        android:id="@+id/rlToolbar"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_back_black_24dp"/>
+
+        <AutoCompleteTextView
+            android:layout_marginStart="40dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_search_black_24dp"
+            android:ems="10"
+            android:background="@android:color/transparent"
+            android:theme="@style/custom_toolbar"
+            android:focusedByDefault="false"
+            android:fontFamily="@font/ubuntu_regular"
+            android:hint="@string/search_your_product_here"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLength="30"
+            android:maxLines="1"
+            android:paddingStart="@dimen/margin_10dp"
+            android:paddingEnd="@dimen/margin_10dp"
+            android:textSize="@dimen/text_medium" />
+
+    </RelativeLayout>
+
+    <include
+        android:visibility="gone"
+        android:layout_below="@id/rlToolbar"
+        layout="@layout/progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

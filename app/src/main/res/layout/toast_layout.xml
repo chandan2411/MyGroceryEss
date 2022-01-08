@@ -1,0 +1,20 @@
+<RelativeLayout android:id="@+id/custom_toast_container"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/black_trans"
+    android:padding="20dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/ubuntu_regular"
+        android:gravity="center_horizontal"
+        android:text="After some time"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_medium" />
+
+</RelativeLayout>

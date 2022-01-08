@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroungColor"
+    tools:context=".view.ui.activity.AboutUsActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+
+        <include
+            layout="@layout/white_toolabr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/ubuntu_regular"
+            android:maxLines="1"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:ellipsize="end"
+            android:text="About Essentials"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_medium" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlBanner"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="vertical"
+            android:paddingBottom="80dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_regular"
+                android:lineSpacingExtra="5dp"
+                android:text="@string/msg1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/ubuntu_regular"
+                android:lineSpacingExtra="5dp"
+                android:text="@string/msg2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/ubuntu_regular"
+                android:lineSpacingExtra="5dp"
+                android:text="@string/msg3"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/ubuntu_regular"
+                android:lineSpacingExtra="5dp"
+                android:text="@string/msg4"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/rlTermsNCondition"
+        android:background="@color/divider" />
+
+    <RelativeLayout
+        android:id="@+id/rlTermsNCondition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:paddingLeft="30dp"
+        android:paddingTop="@dimen/padding_10"
+        android:paddingRight="30dp"
+        android:paddingBottom="@dimen/padding_10">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_regular"
+            android:text="@string/terms_and_conditions"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_large" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/arrow2" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

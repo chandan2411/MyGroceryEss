@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "407847376528",
+    "firebase_url": "https://essentials-e7555.firebaseio.com",
+    "project_id": "essentials-e7555",
+    "storage_bucket": "essentials-e7555.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:407847376528:android:92b51d865892069cc0aa15",
+        "android_client_info": {
+          "package_name": "com.essentials.customerapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "407847376528-ln7p98b8h6m79fckqo5at89407nq12ou.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.essentials.customerapp",
+            "certificate_hash": "23aa8fba08320c9ef4fd648d4a69106eae98a9cd"
+          }
+        },
+        {
+          "client_id": "407847376528-r746n52tch5uevpdtemkh48rc0kfcj8o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbCmeOqgaNRIR1M1zQV56VhJFRyVoZq-A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "407847376528-r746n52tch5uevpdtemkh48rc0kfcj8o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroungColor"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+
+        <include
+            layout="@layout/white_toolabr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_regular"
+                android:maxLines="2"
+                android:text="Cart Items"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_medium" />
+
+            <TextView
+                android:id="@+id/tvSubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_regular"
+                android:maxLines="1"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_xsmall"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlCartFilled"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rlBanner"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_10dp"
+            android:layout_marginTop="@dimen/margin_5dp"
+            android:layout_marginEnd="@dimen/margin_10dp"
+            android:layout_marginBottom="@dimen/margin_5dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/margin_5dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/margin_10dp"
+                    android:paddingTop="@dimen/margin_10dp"
+                    android:paddingEnd="@dimen/margin_10dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:fontFamily="@font/ubuntu_regular"
+                        android:text="@string/m_r_p"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_medium" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".3"
+                        android:gravity="end">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_regular"
+                            android:text="@string/indian_rupee_sign"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/text_medium" />
+
+                        <TextView
+                            android:id="@+id/tvTotalMRPAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_regular"
+                            android:text="@string/_00"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/text_medium" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/margin_10dp"
+                    android:paddingTop="@dimen/margin_10dp"
+                    android:paddingEnd="@dimen/margin_10dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:fontFamily="@font/ubuntu_regular"
+                        android:text="@string/product_discount"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_medium" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".3"
+                        android:gravity="end">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_regular"
+                            android:text="@string/minus"
+                            android:textColor="@color/green"
+                            android:textSize="@dimen/text_medium" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_regular"
+                            android:text="@string/indian_rupee_sign"
+                            android:textColor="@color/green"
+                            android:textSize="@dimen/text_medium" />
+
+                        <TextView
+                            android:id="@+id/tvTotalProductDiscountAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_regular"
+                            android:text="@string/_00"
+                            android:textColor="@color/green"
+                            android:textSize="@dimen/text_medium" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!--CUPON CODE STARTS-->
+                <LinearLayout
+
+                    android:id="@+id/promolayout"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/margin_10dp"
+                    android:paddingTop="@dimen/margin_10dp"
+                    android:paddingEnd="@dimen/margin_10dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:fontFamily="@font/ubuntu_regular"
+                        android:text="Coupon Discount"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_medium" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".3"
+                        android:gravity="end">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_regular"
+                            android:text="@string/minus"
+                            android:textColor="@color/green"
+                            android:textSize="@dimen/text_medium" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_regular"
+                            android:text="@string/indian_rupee_sign"
+                            android:textColor="@color/green"
+                            android:textSize="@dimen/text_medium" />
+
+                        <TextView
+                            android:id="@+id/tvTotalCupondDiscountAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_regular"
+                            android:text="@string/_00"
+                            android:textColor="@color/green"
+                            android:textSize="@dimen/text_medium" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- CUPON CODE ENDS-->
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/margin_10dp"
+                    android:paddingTop="@dimen/margin_10dp"
+                    android:paddingEnd="@dimen/margin_10dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:fontFamily="@font/ubuntu_regular"
+                        android:text="@string/essentials_cash"
+                        android:textColor="@color/sky_blue"
+                        android:textSize="@dimen/text_medium" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".3"
+                        android:gravity="end">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_regular"
+                            android:text="@string/minus"
+                            android:textColor="@color/sky_blue"
+                            android:textSize="@dimen/text_medium" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_regular"
+                            android:text="@string/indian_rupee_sign"
+                            android:textColor="@color/sky_blue"
+                            android:textSize="@dimen/text_medium" />
+
+                        <TextView
+                            android:id="@+id/tvEssentialsDiscount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_regular"
+                            android:text="@string/_00"
+                            android:textColor="@color/sky_blue"
+                            android:textSize="@dimen/text_medium" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_10"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:fontFamily="@font/ubuntu_regular"
+                        android:text="@string/delivery_charges"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_medium" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:gravity="end">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_regular"
+                            android:text="@string/plus"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/text_medium"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_regular"
+                            android:text="@string/indian_rupee_sign"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/text_medium"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tvDeliveryCharges"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_regular"
+                            android:text="@string/free_delivery"
+                            android:textAllCaps="true"
+                            android:textColor="@color/green"
+                            android:textSize="@dimen/text_medium" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/backgroungColor" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_10"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".7"
+                        android:fontFamily="@font/ubuntu_regular"
+                        android:text="@string/sub_total"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_large" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".3"
+                        android:gravity="end">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_regular"
+                            android:text="@string/indian_rupee_sign"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_large" />
+
+                        <TextView
+                            android:id="@+id/tvSubtotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_regular"
+                            android:text="@string/_00"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_large" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+   <!-- Delay note-->
+        <androidx.cardview.widget.CardView
+
+            android:visibility="visible"
+            android:id="@+id/delay_in_delivery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cvDetails"
+            android:layout_marginStart="@dimen/margin_10dp"
+            android:layout_marginTop="@dimen/margin_5dp"
+            android:layout_marginEnd="@dimen/margin_10dp"
+            android:layout_marginBottom="@dimen/margin_5dp"
+            app:cardBackgroundColor="@color/theme_yellow_light"
+            app:cardCornerRadius="@dimen/margin_5dp"
+            app:cardElevation="2dp">
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:paddingTop="@dimen/margin_5dp"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/delay_note_heading"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/margin_15dp"
+                   />
+                <TextView
+                    android:paddingTop="@dimen/margin_5dp"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/delay_note"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Delay note-->
+
+        <!-- PRomo code start -->
+        <androidx.cardview.widget.CardView
+            android:visibility="visible"
+            android:id="@+id/promoCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/delay_in_delivery"
+            android:layout_marginStart="@dimen/margin_10dp"
+            android:layout_marginTop="@dimen/margin_5dp"
+            android:layout_marginEnd="@dimen/margin_10dp"
+            android:layout_marginBottom="@dimen/margin_5dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/margin_5dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:id="@+id/cupon_Code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Promo Code"/>
+                <Button
+                    android:id="@+id/applyCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:text="Apply Promo Code"
+                    android:textAllCaps="true"
+                    android:background="@color/colorPrimaryDark"/>
+                <TextView
+                    android:paddingTop="@dimen/margin_5dp"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:id="@+id/cupon_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cupon_description"/>
+                <TextView
+                    android:paddingTop="@dimen/margin_5dp"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:visibility="gone"
+                    android:id="@+id/cvRemoveCupon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/red"
+                    android:text="@string/remove_Code"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <!-- PRomo code end -->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvDiscountImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/promoCode"
+            android:layout_marginStart="@dimen/margin_10dp"
+            android:layout_marginTop="@dimen/margin_5dp"
+            android:layout_marginEnd="@dimen/margin_10dp"
+            android:layout_marginBottom="@dimen/margin_5dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/margin_5dp"
+            app:cardElevation="2dp">
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/cDiscountImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/cartpage_image" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvRecy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cvDiscountImage"
+            android:layout_marginStart="@dimen/margin_10dp"
+            android:layout_marginTop="@dimen/margin_5dp"
+            android:layout_marginEnd="@dimen/margin_10dp"
+            android:layout_marginBottom="55dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/margin_5dp"
+            app:cardElevation="2dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cart_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/rlCheckout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/theme_yellow"
+            android:onClick="onCheckoutClicked"
+            android:padding="@dimen/margin_10dp">
+
+            <TextView
+                android:id="@+id/tvLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/ubuntu_regular"
+                android:text="@string/checkout"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_large" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:text="@string/indian_rupee_sign"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/tvSubtotal1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:text="@string/_00"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_large" />
+
+                <ImageView
+                    android:id="@+id/iv1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="@dimen/margin_10dp"
+                    android:contentDescription="@string/todo"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:src="@drawable/ic_arrow_forward_white_50dp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/empty_cart_img"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="50dp"
+            android:src="@drawable/empty_cart_img" />
+
+        <TextView
+            android:id="@+id/tvStartShopping"
+            style="@android:style/MediaButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shop_button_bg"
+            android:fontFamily="@font/ubuntu_regular"
+            android:padding="10dp"
+            android:text="Start Shopping"
+            android:textColor="@color/gen_white"
+            android:textSize="@dimen/text_large" />
+
+    </RelativeLayout>
+
+    <include
+        android:layout_below="@id/rlBanner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/progress_layout" />
+
+
+</RelativeLayout>

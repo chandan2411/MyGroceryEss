@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_main">
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rlNotDeliverable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivNotAvailable"
+            android:layout_width="@dimen/not_avail_size"
+            android:layout_height="@dimen/not_avail_size"
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/notavailabe" />
+
+        <TextView
+            android:id="@+id/tvNoDel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivNotAvailable"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:gravity="center_horizontal"
+            android:text="Sorry, we don't deliver in TirupathiTirupathiTirupathiTirupathi"
+            android:textColor="@color/grey_text_color"
+            android:textSize="@dimen/text_small" />
+
+        <TextView
+            android:id="@+id/tvDeliverableCities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvNoDel"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="@dimen/margin_20dp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:gravity="center_horizontal"
+            android:textColor="@color/grey_text_color"
+            android:textSize="@dimen/text_xsmall" />
+
+        <TextView
+            android:id="@+id/tvChangeLocation"
+            style="@android:style/MediaButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shop_button_bg"
+            android:padding="10dp"
+            android:layout_below="@+id/tvDeliverableCities"
+            android:fontFamily="@font/ubuntu_regular"
+            android:text="@string/change_location"
+            android:textColor="@color/gen_white"
+            android:textSize="@dimen/text_large" />
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+    </FrameLayout>
+</RelativeLayout>

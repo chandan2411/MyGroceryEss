@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/ubuntu_regular"
+                android:gravity="center"
+                android:text="@string/are_you_sure_want_to_cancel_to_deliver_this_product"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_large" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/add_text_outline"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvCancelReason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_arrow_down"
+                android:text="@string/reason_for_cancel"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spnCancelReason"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:dropDownWidth="match_parent"
+                android:entries="@array/cancel_reason"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edtFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/add_text_outline"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+            android:gravity="start"
+            android:hint="@string/any_feedback_or_suggestion_for_us"
+            android:inputType="text"
+            android:minLines="4"
+            android:padding="10dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCancelOrder"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Cancel Order"
+                android:textColor="@color/colorPrimary"
+                app:cornerRadius="20dp" />
+
+            <Button
+                android:id="@+id/btnDontCancel"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Don't Cancel"
+                android:textColor="@color/colorPrimary"
+                app:cornerRadius="20dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

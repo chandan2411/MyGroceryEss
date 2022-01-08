@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.essentials.customerapp.viewmodel.WalletViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.ui.activity.MyWalletActivity">
+
+        <RelativeLayout
+            android:id="@+id/rlBanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+
+            <include
+                layout="@layout/white_toolabr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/ubuntu_regular"
+                android:maxLines="1"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="60dp"
+                android:ellipsize="end"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_medium" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".6"
+                android:background="@drawable/wallet_gradient_color">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/cvBalance"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/margin_20dp">
+
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:text="@string/my_balance"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_medium" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_5dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_medium"
+                            android:text="@string/indian_rupee_sign"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_xxxlarge" />
+
+                        <TextView
+                            android:id="@+id/tvWalletAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_medium"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_xxxlarge" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvBalance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="@dimen/padding_10"
+                    android:layout_marginEnd="@dimen/padding_10"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/margin_5dp"
+                    app:cardElevation="@dimen/margin_5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/padding_10">
+
+                        <ImageView
+                            android:id="@+id/ivCash"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:padding="@dimen/padding_10"
+                            android:src="@drawable/business" />
+
+                        <LinearLayout
+                            android:id="@+id/llTexts"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/ivCash"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/padding_10"
+                                    android:fontFamily="@font/ubuntu_medium"
+                                    android:text="@string/essentials_cash"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_medium" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toStartOf="@id/tvWalletAmount1"
+                                    android:fontFamily="@font/ubuntu_medium"
+                                    android:text="@string/indian_rupee_sign"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_medium" />
+
+                                <TextView
+                                    android:id="@+id/tvWalletAmount1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:fontFamily="@font/ubuntu_medium"
+                                    android:text="0"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_medium" />
+
+
+                            </RelativeLayout>
+
+
+                          <TextView
+                                android:id="@+id/tv6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/padding_10"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:text="@string/use_this_to_pay_for_any_order"
+                                android:textColor="@color/grey_text_color"
+                                android:textSize="@dimen/text_small" />
+
+                             <TextView
+                                  android:visibility="visible"
+                                  android:id="@+id/tvKnowMore"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:layout_marginStart="@dimen/padding_10"
+                                  android:fontFamily="@font/ubuntu_medium"
+                                  android:paddingTop="@dimen/margin_5dp"
+                                  android:paddingBottom="@dimen/margin_5dp"
+                                  android:text="@string/know_more"
+                                  android:textColor="@color/theme_yellow"
+                                  android:textSize="@dimen/text_small" />
+                            <TextView
+                                android:visibility="gone"
+                                android:id="@+id/knowMoreDetails"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/padding_10"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:paddingTop="@dimen/margin_5dp"
+                                android:paddingBottom="@dimen/margin_5dp"
+                                android:text="@string/walletDetails"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_small" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".7"
+                android:background="@color/white"
+                android:padding="@dimen/padding_10">
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="@dimen/padding_10"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text="@string/earn_50"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_xlarge" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv3"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="@dimen/padding_10"
+                    android:layout_marginEnd="30dp"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:gravity="center_horizontal"
+                    android:text="@string/invite_your_friends_to_essentials_and_get_50_in_wallet_and_when_they_install_the_appp_using_your_referral_code"
+                    android:textColor="@color/grey_text_color"
+                    android:textSize="@dimen/text_medium" />
+
+                <View
+                    android:visibility="gone"
+                    android:id="@+id/ivLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_1dp"
+                    android:layout_below="@id/tv4"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@color/divider" />
+
+                <TextView
+                    android:id="@+id/tv5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ivLine"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="40dp"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text="@string/invites_now"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv5"
+                    android:weightSum="4">
+
+                    <RelativeLayout
+                        android:onClick="whatsAppShare"
+                        android:id="@+id/rlShareWhatsApp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerInParent="true"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/share_watsapp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:onClick="instaShare"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerInParent="true"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/share_insta" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:onClick="textShare"                       android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerInParent="true"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/share_msg" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:onClick="moreShare"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerInParent="true"
+                            android:contentDescription="@string/todo"
+                            android:src="@drawable/share_more" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

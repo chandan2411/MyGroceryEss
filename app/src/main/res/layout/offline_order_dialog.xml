@@ -1,0 +1,70 @@
+<RelativeLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/signin"
+        android:fontFamily="@font/ubuntu_bold"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/tvDialogMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ubuntu_regular"
+        android:text="You will be redirected to sellers number, there you can place your order."
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_gravity="right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:fontFamily="@font/ubuntu_bold"
+            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/Widget.AppCompat.Button.Borderless"
+            android:text="Cancel"
+            android:background="@android:color/transparent"
+            android:textAllCaps="false"
+            android:id="@+id/btnCancel"/>
+        <Button
+            android:fontFamily="@font/ubuntu_bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/Widget.AppCompat.Button.Borderless"
+            android:text="Ok"
+            android:background="@android:color/transparent"
+            android:textAllCaps="false"
+            android:id="@+id/btnOk"/>
+    </LinearLayout>
+</LinearLayout>
+
+</RelativeLayout>

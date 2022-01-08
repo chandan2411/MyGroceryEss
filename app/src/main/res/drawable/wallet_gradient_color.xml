@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:dither="true"
+    android:shape="rectangle"
+    android:useLevel="true">
+
+
+    <gradient
+        android:angle="270"
+        android:endColor="@color/wallet_gradient_end_color"
+        android:centerColor="@color/wallet_gradient_center_color"
+        android:startColor="@color/wallet_gradient_start_color"
+        android:type="linear" />
+
+</shape>

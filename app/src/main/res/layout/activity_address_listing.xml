@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroungColor"
+    android:orientation="vertical"
+    tools:context=".view.ui.activity.AddressListingActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+
+        <include
+            layout="@layout/white_toolabr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:ellipsize="end"
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/ubuntu_regular"
+            android:maxLines="1"
+            android:text="@string/choose_address"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_medium" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlBanner"
+        android:fontFamily="@font/ubuntu_regular"
+        android:padding="@dimen/padding_10"
+        android:text="@string/your_address_will_appear_here"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_large" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tvText">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerAddress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="60dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvNoAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="50dp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:gravity="center"
+            android:text="@string/no_address_added_yet_please_add_address"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_large"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvAddNewAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/margin_20dp"
+        android:layout_marginTop="@dimen/padding_10"
+        android:layout_marginEnd="@dimen/margin_20dp"
+        android:layout_marginBottom="@dimen/padding_10"
+        android:background="@color/white"
+        app:cardBackgroundColor="@color/addaddressbkg"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_10"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="+"
+                android:textColor="@color/green"
+                android:textSize="@dimen/text_xxlarge" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_10"
+                android:fontFamily="@font/ubuntu_bold"
+                android:text="Address"
+                android:textAllCaps="true"
+                android:textColor="@color/green"
+                android:textSize="@dimen/text_large" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <include
+        android:layout_below="@id/rlBanner"
+        layout="@layout/progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</RelativeLayout>

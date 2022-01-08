@@ -1,0 +1,200 @@
+<resources>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="email">Email Id</string>
+    <string name="passowrd">Password</string>
+    <string name="login">Login</string>
+    <string name="show_pwd">Show Password</string>
+    <string name="hide_pwd">Hide Password</string>
+    <string name="forgot">Forgot password?</string>
+    <string name="closebutton">Close Button for Activity</string>
+    <string name="newUser">Not a Member yet? Sign Up here.</string>
+    <string name="fullName">Full Name</string>
+    <string name="mobileNumber">Mobile Number</string>
+    <string name="location">Location</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="terms_conditions">By clicking SignUp you agree all the Terms and Conditions.</string>
+    <string name="signUp">SIGN UP</string>
+    <string name="already_user">Already have Account? Login here.</string>
+    <string name="registered_emailid">Please enter your Registered Email Id below:</string>
+    <string name="submit">SUBMIT</string>
+    <string name="back">BACK</string>
+    <string name="action_Cart">Cart</string>
+    <string name="app_name">Essentials</string>
+    <string name="preference_file_name">grocery_shared_pref</string>
+    <string name="location_message">Please allow permission for location</string>
+    <string name="choose_location">Add Address</string>
+    <string name="auto_location">Auto Location</string>
+    <string name="service_not_available">All Locations in Ranchi</string>
+    <string name="invalid_lat_long_used">Invalid lat long</string>
+    <string name="no_address_found">No Address found</string>
+    <string name="address_found">Address found</string>
+    <string name="no_geocoder_available">No Address</string>
+    <string name="pincode">Pincode*</string>
+    <string name="add_address">Add Address</string>
+    <string name="houseno">Flat/House/Office No.</string>
+    <string name="officename">Street/Society/Office Name</string>
+    <string name="city">City*</string>
+    <string name="landmark">Landmark(Optional)</string>
+    <string name="save_address">Save Address</string>
+    <string name="login_to_checkout">Login to Checkout</string>
+    <string name="msg1">Essentials Baskets Private Limited is an e-commerce venture that provides food staples and household items at your doorstep. Essentials is established with a motto - ‘Create value for our customers to build an ever-lasting relation’.</string>
+    <string name="msg2"><![CDATA[Our efficient & bulk procurement, state-of-the-art storage & handling, and unmatched logistics enable us to pass on the price and quality advantage to our customers.]]></string>
+    <string name="msg3">We firmly believe that ultimately it is the customer trust that creates profitable businesses. We bring highest quality products at the most honest, reasonable and competing prices with unmatched convenience – savings on time and money!!!</string>
+    <string name="msg4">We shall continue to strive hard to innovate and discover efficient means to create value for our customers, employees and community.</string>
+    <string name="msg5">Having issues with an order....??</string>
+    <string name="admin_email">Essentialsbasket@gmail.com</string>
+    <string name="admin_mobile_no">78925 34152</string>
+    <string name="rs">Rs</string>
+    <string name="_10">10%</string>
+    <string name="image">IMAGE</string>
+    <string name="indian_rupee_sign">₹</string>
+    <string name="thanks_for_shopping_with_go_fresh">Thanks for shopping with Essentials</string>
+    <string name="your_order_has_been_placed">Your order has been placed</string>
+    <string name="continue_shopping">Continue Shopping</string>
+    <string name="please_pay_amount_to_the_delivery_executive">Please pay amount to the delivery executive</string>
+    <string name="are_you_sure_want_to_cancel_to_deliver_this_product">Are you sure want to cancel to deliver this product??</string>
+    <string name="reason_for_cancel">Reason for cancel</string>
+    <string name="any_feedback_or_suggestion_for_us">Any feedback or suggestion for us</string>
+    <string name="signin">SignIn</string>
+    <string name="get_25_off_on_first_three_order_on_shopping_over_999">Flat ₹75 off on first three order on shopping over ₹999</string>
+    <string name="get_free_delivery">Get free delivery on order above 499</string>
+    <string name="adderss">My Adderss</string>
+    <string name="payment">Payment</string>
+    <string name="full_name">Full Name</string>
+    <string name="mobile_number">Mobile number</string>
+    <string name="onestep_for_all_your_essentials">OneStep For All YOUR ESSENTIALS</string>
+    <string name="imageview">IMAGEVIEW</string>
+    <string name="we_will_send_an_sms_with_a_confirmation_code_to_this_number">We will send an SMS with a confirmation code to this number</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="use_your_referral_code_here">Use your referral code here</string>
+    <string name="_91">+91</string>
+    <string name="enter_code">Enter Code</string>
+    <string name="next">Next</string>
+    <string name="or">OR</string>
+
+    <string-array name="cancel_reason">
+        <item>@string/reason_for_cancel</item>
+        <item>Found better deal </item>
+        <item>Not required </item>
+        <item>Have doubt about product </item>
+    </string-array>
+
+    <!--<string name="facebook_app_id">173073210707694</string>
+    <string name="fb_login_protocol_scheme">fb173073210707694</string>-->
+
+    <string name="facebook_app_id">979909516279386</string>
+    <string name="fb_login_protocol_scheme">fb979909516279386</string>
+
+    <string name="please_enter_activation_code_manually">Please enter activation code manually</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="for_all_your">for all your</string>
+    <string name="one_step">ONE STEP</string>
+    <string name="essentials">Essentials</string>
+    <string name="todo">TODO</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="new_products">New Products</string>
+    <string name="shop_by_category">Shop by Category</string>
+    <string name="popular_products">Deals Of The Day</string>
+    <string name="rec_products">Recommended Essentials</string>
+    <string name="categories">Categories</string>
+    <string name="search_your_product_here">Search 10000+ Products</string>
+    <string name="plus">+</string>
+    <string name="add">Add</string>
+    <string name="minus">-</string>
+    <string name="delivery_location">We Deliver</string>
+    <string name="welcome">Welcome</string>
+    <string name="my_cart">My Cart</string>
+    <string name="my_order">My order</string>
+    <string name="my_wallet">My Wallet</string>
+    <string name="order_by_call">Offline Order</string>
+    <string name="need_help">Customer Support</string>
+    <string name="share">Share</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="about_us">About Us</string>
+    <string name="logout">Logout</string>
+    <string name="change_location">Change Location</string>
+    <string name="my_balance">My Balance</string>
+    <string name="essentials_cash">Essentials Cash</string>
+    <string name="use_this_to_pay_for_any_order">Use this to pay for any order</string>
+    <string name="know_more"><![CDATA[Know more >]]></string>
+    <string name="invite_your_friends_to_essentials_and_get_50_in_wallet_and_when_they_install_the_appp_using_your_referral_code">Invite your friends to Essentials and get ₹50 in wallet when they install the app using your referral code</string>
+    <string name="invites_now">Invite Now</string>
+    <string name="earn_50">Earn ₹50</string>
+    <string name="check_internet">Please Check Internet Connection</string>
+    <string name="please_enter_mobile_number">Please enter mobile number</string>
+    <string name="please_enter_valid_mobile_number">Please enter valid mobile number</string>
+    <string name="m_r_p">M.R.P.</string>
+    <string name="product_discount">Product Discount</string>
+    <string name="delivery_charges">Delivery Charges</string>
+    <string name="sub_total">Sub total</string>
+    <string name="_00">000</string>
+    <string name="checkout">Checkout</string>
+    <string name="free_delivery">Free</string>
+    <string name="sorry_products_not_found">Sorry Products not found</string>
+    <string name="search_items">Search Items</string>
+    <string name="some_error_found_try_again_later">Some Error Found.. Try Again Later</string>
+    <string name="unit">Unit</string>
+    <string name="description">Description</string>
+    <string name="bigtext">hdjhjfhjskjdksjkjdkjssdkjsakdjksajdkjaskjsakjdjsakhdjhjfhjskjdksjkjdkjssdkjsakdjksajdkjaskjsakjdjsakhdjhjfhjskjdksjkjdkjssdkjsakdjksajdkjaskjsakjdjsakhdjhjfhjskjdksjkjdkjssdkjsakdjksajdkjaskjsakjdjsakhdjhjfhjskjdksjkjdkjssdkjsakdjksajdkjaskjsakjdjsakhdjhjfhjskjdksjkjdkjssdkjsakdjksajdkjaskjsakjdjsakhdjhjfhjskjdksjkjdkjssdkjsakdjksajdkjaskjsakjdjsakhdjhjfhjskjdksjkjdkjssdkjsakdjksajdkjaskjsakjdjsakhdjhjfhjskjdksjkjdkjssdkjsakdjksajdkjaskjsakjdjsak</string>
+    <string name="nickname_of_your_address">Nickname of your address</string>
+    <string name="choose_address">My Addresses</string>
+    <string name="disclaimer">Disclaimer</string>
+    <string name="more_info">More Info</string>
+    <string name="disclaimer_msg">Every effort is made to maintain accuracy of all information. However, actual product packaging and materials may contain more and/or different information. It is recommended not to solely rely on the information presented.</string>
+    <string name="home">Home</string>
+    <string name="remove">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="your_address_will_appear_here">Your address will appear here</string>
+    <string name="total_payable_amount">Total Payable Amount</string>
+    <string name="select_payment_option">Select Payment Option</string>
+    <string name="cash_on_delivery">Cash on Delivery</string>
+    <string name="payments_msg">you can also pay the amount to the delivery boy via Google pay or Phone pay or any other upi payment method at the time of delivery.</string>
+    <string name="make_payemt">Place Order</string>
+    <string name="ok">OK</string>
+    <string name="your_order_has_been_successfully_placed">your order has been successfully placed</string>
+    <string name="order_msg1">Check your order status in Your orders section</string>
+    <string name="payment_options">Payment Options</string>
+    <string name="no_address_added_yet_please_add_address">No Address added yet.. Please add address</string>
+    <string name="payment_summary">Payment Summary</string>
+    <string name="final_paid_amount">Final paid amount</string>
+    <string name="wallet_amount">Wallet amount</string>
+    <string name="choose_delivery_slot_for_this_address">Choose delivery slot for this address</string>
+    <string name="proceed_payment">Proceed Payment</string>
+    <string name="terms_and_conditions">Terms &amp; Conditions</string>
+    <string name="order_via_whatsapp_by_calling_us">Order via WhatsApp or by calling us</string>
+    <string name="customer_support_no">7033488622</string>
+    <string name="click_here_to_call_us_and_place_an_order">Click here to call us and place an order</string>
+    <string name="click_here_to_place_order_on_whatsapp">Click here to place order on Whatsapp</string>
+    <string name="that_s_all_folks">That\'s all folks</string>
+    <string name="msg_token_fmt">Message Token</string>
+    <string name="track_order">Track Order</string>
+    <string name="share_whatsapp_not_instaled">Whatsapp not Insatalled</string>
+    <string name="share_intent_title">Share Whatsapp</string>
+    <string name="_834009">834009</string>
+    <string name="razor_pay_test_key">rzp_test_EkhCuVYH8Veyzt</string>
+    <string name="razor_pay_live_key">rzp_live_EtJOJCMSIPNzm6	</string>
+    <string name="retry">Retry</string>
+    <string name="walletDetails">1. Essentials wallet can be used for any amount of order. \n 2. Wallet amount is not transferable. \n 3. 1% upto 100 can be used at a time. \n 4. Essentials cash is valid for 1 year only.\n 5. Essentials cash is refundable if the order gets cancelled.</string>
+    <string name="cupon_description">Apply Promo Code</string>
+    <string name="remove_Code"><u>Remove Promo Code</u></string>
+    <string name="delay_note_heading">IMPORTANT NOTE</string>
+    <string name="delay_note">We will deliver your order at the earliest. However, due to current surge in orders it may be delayed.</string>
+    <!--Fire base message topics-->
+
+    <array name="topics">
+        <item>Notification</item>
+        <item>Promotional</item>
+        <item>Warnings</item>
+    </array>
+
+</resources>

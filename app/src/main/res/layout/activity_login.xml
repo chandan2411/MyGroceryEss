@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout android:background="@color/white"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/rlBanner"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:visibility="visible">
+
+
+        <include
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            layout="@layout/white_toolabr" />
+
+        <TextView
+            android:fontFamily="@font/ubuntu_regular"
+            android:id="@+id/tvTitle"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:maxLines="1"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:ellipsize="end"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_medium" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/frameContainer"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" />
+
+
+</LinearLayout>
+

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="@dimen/margin_20dp"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_margin="50dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/sad"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Oops! you have cancelled your order"
+        android:textSize="@dimen/text_large"
+        android:textColor="@color/black"
+        android:fontFamily="@font/ubuntu_medium"
+        android:gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/order_msg1"
+        android:textSize="@dimen/text_medium"
+        android:textColor="@color/black"
+        android:fontFamily="@font/ubuntu_regular"
+        android:gravity="center_horizontal"/>
+
+    <RelativeLayout
+        android:id="@+id/rlOK"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/theme_yellow"
+        android:padding="@dimen/margin_10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/ok"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_large" />
+    </RelativeLayout>
+
+
+</LinearLayout>

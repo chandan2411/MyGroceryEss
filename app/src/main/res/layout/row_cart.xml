@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llCartItems"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_15dp"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_5dp"
+            android:layout_weight=".3">
+
+            <ImageView
+                android:id="@+id/product_image"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/grocery_staples" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin_5dp"
+            android:layout_weight=".7"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_5dp"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/margin_5dp">
+
+                <TextView
+                    android:id="@+id/tvSPCurrency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:text="@string/indian_rupee_sign"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large" />
+
+                <TextView
+                    android:id="@+id/tvSP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/tvSPCurrency"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text="@string/_00"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_large" />
+
+                <RelativeLayout
+                    android:id="@+id/rlMRP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/tvSP"
+                    android:visibility="invisible">
+
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu_regular"
+                        android:text="@string/indian_rupee_sign"
+                        android:textColor="@color/divider"
+                        android:textSize="@dimen/text_large" />
+
+                    <TextView
+                        android:id="@+id/tvMRP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/tv1"
+                        android:fontFamily="@font/ubuntu_regular"
+                        android:text="@string/_00"
+                        android:textColor="@color/divider"
+                        android:textSize="@dimen/text_large" />
+
+                    <View
+                        android:layout_width="40dp"
+                        android:layout_height="1dp"
+                        android:layout_centerVertical="true"
+                        android:background="@color/divider" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvDiscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/green_card_layout"
+                    android:text="10% Off"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_xsmall"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:paddingBottom="@dimen/margin_5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginEnd="40dp"
+                    android:id="@+id/product_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_5dp"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:text="Grofers Mothers"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium" />
+
+                <ImageView
+                    android:contentDescription="@string/todo"
+                    android:id="@+id/ivDelete"
+                    android:padding="@dimen/margin_5dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/delete"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_5dp"
+                android:paddingBottom="@dimen/margin_5dp">
+
+                <TextView
+                    android:id="@+id/tvProductQuantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:text="200 g"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_medium" />
+
+                <RelativeLayout
+                    android:id="@+id/quantity_ll"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/tvQuantityMinus"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentStart="true"
+                        android:background="@drawable/shop_button_border"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:gravity="center"
+                        android:text="@string/minus"
+                        android:textColor="@color/theme_yellow"
+                        android:textSize="@dimen/text_medium"
+                        tools:ignore="RelativeOverlap" />
+
+                    <TextView
+                        android:id="@+id/tvQuantityAdded"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:gravity="center_horizontal"
+                        android:padding="@dimen/margin_5dp"
+                        android:text="1"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_medium" />
+
+                    <TextView
+                        android:id="@+id/tvQuantityPlus"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/shop_button_border"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:gravity="center"
+                        android:text="@string/plus"
+                        android:textColor="@color/theme_yellow"
+                        android:textSize="@dimen/text_medium"
+                        tools:ignore="RelativeOverlap" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_1dp"
+        android:background="@color/backgroungColor" />
+
+</LinearLayout>

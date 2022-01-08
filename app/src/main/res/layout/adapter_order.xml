@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroungColor"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/padding_10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_regular"
+            android:text="Placed on "
+            android:textAlignment="center"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_small" />
+
+        <TextView
+            android:id="@+id/tvOrderPlacedDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ubuntu_medium"
+            android:textAlignment="center"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/text_small" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/padding_10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_regular"
+                android:text="Scheduled for "
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium" />
+
+            <TextView
+                android:id="@+id/tvOrderScheduleDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_medium"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium" />
+
+        </LinearLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_20dp"
+            android:layout_marginTop="0dp"
+            app:cardElevation="@dimen/margin_2dp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/padding_10">
+
+
+                <RelativeLayout
+                    android:id="@+id/rlDeliveredBy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/margin_15dp"
+                    android:paddingTop="@dimen/padding_10"
+                    android:paddingEnd="@dimen/margin_15dp"
+                    android:paddingBottom="@dimen/padding_10"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/ivImageType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/bag" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/margin_10dp"
+                        android:layout_toEndOf="@+id/ivImageType"
+                        android:fontFamily="@font/ubuntu_regular"
+                        android:text="Delivered by Essentials"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/text_small" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_1dp"
+                    android:background="@color/grey_background" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/margin_15dp"
+                    android:paddingTop="@dimen/margin_15dp"
+                    android:paddingEnd="@dimen/margin_15dp"
+                    android:paddingBottom="@dimen/margin_5dp"
+                    android:weightSum="1">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".15">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:src="@drawable/market" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".85"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/margin_5dp"
+                            android:paddingBottom="@dimen/margin_5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:text="Essentials Store"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_medium" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/margin_10dp"
+                                android:layout_toStartOf="@id/tvTotalPrice"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:text="@string/indian_rupee_sign"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_medium" />
+
+                            <TextView
+                                android:id="@+id/tvTotalPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_medium" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/margin_5dp"
+                            android:paddingBottom="@dimen/margin_5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/ubuntu_regular"
+                                android:text="Delivery Charges"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/text_medium" />
+
+
+                            <TextView
+                                android:id="@+id/tvDeliveryCharges"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/ubuntu_regular"
+                                android:textColor="@color/green"
+                                android:textSize="@dimen/text_medium" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/margin_5dp"
+                            android:paddingBottom="@dimen/margin_5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/ubuntu_regular"
+                                android:text="Order ID: "
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/text_medium" />
+
+                            <TextView
+                                android:id="@+id/tvOrderId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/ubuntu_regular"
+                                android:text="85488ejhn"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/text_medium" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/rlDeliveredTick"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:paddingTop="@dimen/padding_10"
+                            android:paddingBottom="@dimen/padding_10">
+
+                            <ImageView
+                                android:id="@+id/ivOrderStatus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/ubuntu_regular"
+                                android:src="@drawable/tick"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/text_medium" />
+
+                            <TextView
+                                android:id="@+id/tvOrderStatus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/margin_5dp"
+                                android:fontFamily="@font/ubuntu_regular"
+                                android:textColor="@color/green"
+                                android:textSize="@dimen/text_medium" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:paddingTop="@dimen/margin_5dp"
+            android:paddingBottom="@dimen/margin_5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ubuntu_regular"
+                android:text="@string/wallet_amount"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_medium" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/margin_10dp"
+                android:layout_toStartOf="@id/tvWalletRupee"
+                android:fontFamily="@font/ubuntu_regular"
+                android:text="-"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_medium" />
+
+            <TextView
+                android:id="@+id/tvWalletRupee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_5dp"
+                android:layout_toStartOf="@id/tvWalletDiscount"
+                android:fontFamily="@font/ubuntu_regular"
+                android:text="@string/indian_rupee_sign"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_medium" />
+
+            <TextView
+                android:id="@+id/tvWalletDiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/ubuntu_regular"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_medium" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:paddingTop="@dimen/margin_5dp"
+            android:paddingBottom="@dimen/margin_5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="@string/final_paid_amount"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/margin_5dp"
+                android:layout_toStartOf="@id/tvFinalAmount"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="@string/indian_rupee_sign"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium" />
+
+            <TextView
+                android:id="@+id/tvFinalAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/ubuntu_medium"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_medium" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_1dp"
+            android:layout_margin="@dimen/margin_20dp"
+            android:background="@color/divider" />
+
+        <TextView
+            android:id="@+id/tvViewDetails"
+            style="@android:style/MediaButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="@dimen/margin_20dp"
+            android:layout_marginBottom="@dimen/margin_20dp"
+            android:background="@drawable/shop_button_bg"
+            android:fontFamily="@font/ubuntu_bold"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="View Details"
+            android:textColor="@color/gen_white"
+            android:textSize="@dimen/text_large" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

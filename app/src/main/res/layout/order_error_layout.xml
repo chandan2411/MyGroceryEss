@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="@dimen/margin_20dp"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_margin="50dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/errorpayment"/>
+
+    <TextView
+        android:id="@+id/tvErrorMessage"
+        android:layout_marginBottom="@dimen/padding_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/your_order_has_been_successfully_placed"
+        android:textSize="@dimen/text_large"
+        android:textColor="@color/black"
+        android:fontFamily="@font/ubuntu_medium"
+        android:gravity="center_horizontal"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvCancel"
+            android:layout_marginStart="@dimen/margin_5dp"
+            android:padding="@dimen/margin_10dp"
+            android:gravity="center"
+            android:background="@color/theme_yellow"
+            android:layout_weight=".5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_large" />
+
+        <TextView
+            android:id="@+id/tvRetry"
+            android:layout_marginStart="@dimen/margin_5dp"
+            android:padding="@dimen/margin_10dp"
+            android:gravity="center"
+            android:background="@color/theme_yellow"
+            android:layout_weight=".5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/retry"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_large" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

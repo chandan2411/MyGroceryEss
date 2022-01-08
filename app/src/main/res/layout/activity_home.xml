@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <include
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_width="@dimen/drawer_width"
+        android:layout_gravity="start"
+        android:scrollbars="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/backgroungColor"
+            android:orientation="vertical">
+
+            <include layout="@layout/nav_header_main" />
+
+            <RelativeLayout
+                android:id="@+id/rlCurrentAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_10">
+
+                <ImageView
+                    android:id="@+id/nav_iv_location"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/todo"
+                    android:padding="@dimen/padding_10"
+                    android:src="@drawable/ic_location_on_grey_24dp" />
+
+                <TextView
+                    android:id="@+id/tvCurrentAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/nav_iv_edit"
+                    android:layout_toEndOf="@+id/nav_iv_location"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:maxLines="2"
+                    android:text="Holy Family Church , Ramamurthy Nagar , Bangalore"
+                    android:textColor="@color/grey_text_color"
+                    android:textSize="@dimen/text_small" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/nav_iv_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/todo"
+                    android:padding="@dimen/padding_10"
+                    android:src="@drawable/ic_edit_grey_24dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_10">
+
+                <ImageView
+                    android:id="@+id/nav_iv_login"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/todo"
+                    android:padding="@dimen/padding_10"
+                    android:src="@drawable/ic_login_grey_24dp" />
+
+                <TextView
+                    android:id="@+id/tvLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/nav_iv_login"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:maxLines="2"
+                    android:text="@string/login"
+                    android:textColor="@color/grey_text_color"
+                    android:textSize="@dimen/text_small" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_10">
+
+                <ImageView
+                    android:id="@+id/nav_iv_address"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/todo"
+                    android:padding="@dimen/padding_10"
+                    android:src="@drawable/ic_addresses_on_grey_24dp" />
+
+                <TextView
+                    android:id="@+id/tvMyAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/nav_iv_address"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:maxLines="2"
+                    android:text="@string/adderss"
+                    android:textColor="@color/grey_text_color"
+                    android:textSize="@dimen/text_small" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlMYOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_10">
+
+                <ImageView
+                    android:id="@+id/nav_iv_orders"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/todo"
+                    android:padding="@dimen/padding_10"
+                    android:src="@drawable/ic_orders_on_grey_24dp" />
+
+                <TextView
+                    android:id="@+id/tMyOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/nav_iv_orders"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:maxLines="2"
+                    android:text="@string/my_order"
+                    android:textColor="@color/grey_text_color"
+                    android:textSize="@dimen/text_small" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlMyCart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_10">
+
+                <ImageView
+                    android:id="@+id/nav_iv_cart"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/todo"
+                    android:padding="@dimen/padding_10"
+                    android:src="@drawable/ic_shopping_cart_grey_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/nav_iv_cart"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:maxLines="2"
+                    android:text="@string/my_cart"
+                    android:textColor="@color/grey_text_color"
+                    android:textSize="@dimen/text_small" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlMyWallet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_10">
+
+                <ImageView
+                    android:id="@+id/nav_iv_wallet"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/todo"
+                    android:padding="@dimen/padding_10"
+                    android:src="@drawable/ic_account_balance_wallet_grey_24dp" />
+
+                <TextView
+                    android:id="@+id/tvMyWallet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/tvWalletAmount"
+                    android:layout_toEndOf="@+id/nav_iv_wallet"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:maxLines="2"
+                    android:text="@string/my_wallet"
+                    android:textColor="@color/grey_text_color"
+                    android:textSize="@dimen/text_small" />
+
+                <TextView
+                    android:layout_toStartOf="@id/tvWalletAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/indian_rupee_sign"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/text_medium" />
+                <TextView
+                    android:id="@+id/tvWalletAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="0"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/text_medium" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlOrderByPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_10">
+
+                <ImageView
+                    android:id="@+id/nav_iv_order_by_call"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/todo"
+                    android:padding="@dimen/padding_10"
+                    android:src="@drawable/ic_order_by_call_grey_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/nav_iv_order_by_call"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:maxLines="2"
+                    android:text="@string/order_by_call"
+                    android:textColor="@color/grey_text_color"
+                    android:textSize="@dimen/text_small" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlNeedHelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_10">
+
+                <ImageView
+                    android:id="@+id/nav_iv_need_help"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/todo"
+                    android:padding="@dimen/padding_10"
+                    android:src="@drawable/ic_help_grey_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/nav_iv_need_help"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:maxLines="2"
+                    android:text="@string/need_help"
+                    android:textColor="@color/grey_text_color"
+                    android:textSize="@dimen/text_small" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlShare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_10">
+
+                <ImageView
+                    android:id="@+id/nav_iv_share"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/todo"
+                    android:padding="@dimen/padding_10"
+                    android:src="@drawable/ic_share_grey_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/nav_iv_share"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:maxLines="2"
+                    android:text="@string/share"
+                    android:textColor="@color/grey_text_color"
+                    android:textSize="@dimen/text_small" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlRateUs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_10">
+
+                <ImageView
+                    android:id="@+id/nav_iv_rate_us"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/todo"
+                    android:padding="@dimen/padding_10"
+                    android:src="@drawable/ic_rate_us_grey_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/nav_iv_rate_us"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:maxLines="2"
+                    android:text="@string/rate_us"
+                    android:textColor="@color/grey_text_color"
+                    android:textSize="@dimen/text_small" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlAboutUs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_10">
+
+                <ImageView
+                    android:id="@+id/nav_iv_about_us"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/todo"
+                    android:padding="@dimen/padding_10"
+                    android:src="@drawable/ic_about_us_grey_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/nav_iv_about_us"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:maxLines="2"
+                    android:text="@string/about_us"
+                    android:textColor="@color/grey_text_color"
+                    android:textSize="@dimen/text_small" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_10">
+
+                <ImageView
+                    android:id="@+id/nav_iv_logout"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/todo"
+                    android:padding="@dimen/padding_10"
+                    android:src="@drawable/ic_logout_black_24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/nav_iv_logout"
+                    android:fontFamily="@font/ubuntu_regular"
+                    android:maxLines="2"
+                    android:text="@string/logout"
+                    android:textColor="@color/grey_text_color"
+                    android:textSize="@dimen/text_small" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
